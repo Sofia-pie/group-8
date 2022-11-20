@@ -5,6 +5,8 @@
 	<p><a [routerLink]="['/main-page']">Головна сторінка</a> > Блог</p>
 </div>
 <div class="blog-section">
-	<app-blog-card *ngFor="let blog of blogs$|async" [blog]="blog"></app-blog-card>
+	<app-blog-card *ngFor="let blog of blogs| paginate: { itemsPerPage: 8, currentPage: p }" [blog]="blog">
+	</app-blog-card>
 
 </div>
+<pagination-controls (pageChange)="p = $event" class="button-page"></pagination-controls>

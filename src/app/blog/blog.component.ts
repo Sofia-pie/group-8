@@ -9,10 +9,11 @@ import { BlogService } from '../core/services/blog.service';
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent implements OnInit {
-  blogs$: Observable<Blog[]>;
+  blogs: Blog[];
+  p: number = 1;
   constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogService.getBlogs();
+    this.blogService.getBlogs().subscribe((blogs) => (this.blogs = blogs));
   }
 }

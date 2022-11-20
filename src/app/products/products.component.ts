@@ -12,6 +12,7 @@ import { ProductService } from '../core/services/product.service';
 export class ProductsComponent implements OnInit {
   products: Product[];
   searchValue: string = '';
+  p: number = 1;
 
   constructor(
     private productService: ProductService,

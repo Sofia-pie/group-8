@@ -57,18 +57,15 @@
 				</div>
 			</div>
 			<div class="goods-catalog">
-				<app-product-card *ngFor="let product of products  | search: searchValue" [product]='product'
-					(buyProduct)="buy($event)">
+				<app-product-card
+					*ngFor="let product of products  | search: searchValue | paginate: { itemsPerPage: 9, currentPage: p }"
+					[product]='product' (buyProduct)="buy($event)">
 				</app-product-card>
 			</div>
 
 		</div>
-		<div class="button-page">
-			<button class="button-page-now" href="">1</button>
-			<button class="button-page">2</button>
-			<button class="button-page">></button>
-		</div>
-	</div>
 
+	</div>
+	<pagination-controls (pageChange)="p = $event" class="button-page"></pagination-controls>
 
 </div>
