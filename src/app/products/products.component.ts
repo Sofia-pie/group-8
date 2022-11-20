@@ -14,6 +14,8 @@ export class ProductsComponent implements OnInit {
   searchValue: string = '';
   p: number = 1;
 
+  sortParams: any;
+
   constructor(
     private productService: ProductService,
     private cartService: CartService

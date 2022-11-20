@@ -7,4 +7,5 @@ export interface Product {
   additional?: string;
   amount: number;
   category: string;
+  createdAt: Date;
 }

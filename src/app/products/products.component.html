@@ -7,10 +7,11 @@
 			<p><a [routerLink]="['/main-page']">Головна сторінка</a> > Каталог товару</p>
 		</div>
 		<div class="sort">
-			<select name="sort-list">
-				<option value="1">За замовчуванням</option>
-				<option value="2">За ціною: від нижчої до вищої</option>
-				<option value="3">За ціною: від вищої до нижчої</option>
+			<select name="sort-list" [(ngModel)]="sortParams">
+				<option value="undefined" disabled selected>Сортувати за</option>
+				<option [ngValue]="{type:'default', option:'createdAt'}">За замовчуванням</option>
+				<option [ngValue]="{type:'asc',option:'price'}">За ціною: від нижчої до вищої</option>
+				<option [ngValue]="{type:'desc', option:'price'}">За ціною: від вищої до нижчої</option>
 			</select>
 		</div>
 		<div class="goods-section">
@@ -58,7 +59,7 @@
 			</div>
 			<div class="goods-catalog">
 				<app-product-card
-					*ngFor="let product of products  | search: searchValue | paginate: { itemsPerPage: 9, currentPage: p }"
+					*ngFor="let product of products  | search: searchValue | sort:sortParams | paginate: { itemsPerPage: 9, currentPage: p }"
 					[product]='product' (buyProduct)="buy($event)">
 				</app-product-card>
 			</div>
