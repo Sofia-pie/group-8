@@ -18,8 +18,6 @@ export class ProductService {
   }
 
   getProduct(id: number | string): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${id}`, {
-      headers: this.headers,
-    });
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 }

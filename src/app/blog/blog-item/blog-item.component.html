@@ -1,1 +1,20 @@
-<p>{{stream$ | async| json}}</p>
+<div class="wavepage">
+	<p><a [routerLink]="['/main-page']">Головна сторінка </a>> <a [routerLink]="['/blogs']">Блог</a> > Звідки береться
+		мед</p>
+</div>
+<div class="info">
+	<h2>{{blog.name}}</h2>
+
+
+	<p>{{blog.text}}</p>
+
+
+
+
+</div>
+<div class="posts-container">
+	<h2><b>Схожі Пости:</b></h2>
+	<div class="posts">
+		<app-blog-card *ngFor="let b of blogs" [blog]="b"></app-blog-card>
+	</div>
+</div>
