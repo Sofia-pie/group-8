@@ -10,6 +10,7 @@ import { CoreModule } from './core/core.module';
 import { MainPageModule } from './main-page/main-page.module';
 import { AuthInterceptor } from './core/interceptors/authconfig.interceptor';
 import { AuthModule } from './auth/auth.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
     MainPageModule,
     CoreModule,
     AuthModule,
+    DashboardModule,
     AppRoutingModule,
     CartModule,
     HttpClientModule,

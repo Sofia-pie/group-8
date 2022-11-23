@@ -1,1 +1,80 @@
-<p>dashboard works!</p>
+<main class="main">
+	<div>
+		<img class="home-icon" src="assets/images/Icons/home icon.png" alt="home icon">
+		<label class="title-main">Панель управління</label>
+	</div>
+	<div class="counters">
+		<div class="orders-sum">
+			<p class="position-order">Кількість заказів</p>
+			<div class="background-orders">
+				<img class="position-order" src="assets/images/Icons/cart icon.png" alt="orders icon">
+				<label class="count-orders">0</label>
+			</div>
+		</div>
+		<div class="sells-sum">
+			<p class="position-order">Кількість заказів</p>
+			<div class="background-sells">
+				<img class="position-order" src="assets/images/Icons/card icon.png" alt="card icon">
+				<label class="count-sells">0</label>
+			</div>
+		</div>
+		<div class="users-sum">
+			<p class="position-order">Кількість заказів</p>
+			<div class="background-users">
+				<img class="position-order" src="assets/images/Icons/cart id icon.png" alt="cart id icon">
+				<label class="count-users">0</label>
+			</div>
+		</div>
+		<div class="online-sum">
+			<p class="position-order">Кількість заказів</p>
+			<div class="background-online">
+				<img class="position-order" src="assets/images/Icons/people icon.png" alt="people icon">
+				<label class="count-online">0</label>
+			</div>
+		</div>
+	</div>
+	<div class="latest-add-goods">
+		<p>Нещодавньо додані товари</p>
+		<table border="1">
+			<tr>
+				<th>Назва</th>
+				<th>Посилання</th>
+				<th>Дата</th>
+			</tr>
+			<ng-container *ngFor="let product of products">
+				<tr>
+					<td>{{product.name}}</td>
+					<td><a [routerLink]="['/products/',product._id]">🔗</a></td>
+					<td>{{product.createdAt | date: 'dd/MM/yyyy'}}</td>
+				</tr>
+			</ng-container>
+
+		</table>
+	</div>
+
+</main>
+<div class="left-content">
+	<div class="left-content-position">
+		<img class="LogoS" src="assets/images/Logo/LogoS.png" alt="LogoS">
+		<div class="button-section1">
+			<img class="img-panel" src="assets/images/Icons/home icon.png" alt="home icon">
+			<br>
+			<a class="a-panel" href="">Панель управління</a>
+		</div>
+		<div class="button-section2">
+			<img class="img-goods" src="assets/images/Icons/cart icon.png" alt="cart icon">
+			<br>
+			<a class="a-goods" href="">Товар</a>
+		</div>
+		<div class="button-section3">
+			<img class="img-orders" src="assets/images/Icons/card icon.png" alt="card icon">
+			<br>
+			<a class="a-orders" href="">Закази</a>
+		</div>
+		<div class="button-section4">
+			<img class="img-users" src="assets/images/Icons/card icon.png" alt="card id icon">
+			<br>
+			<a class="a-users" href="">Користувачі</a>
+		</div>
+	</div>
+</div>
