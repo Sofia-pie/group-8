@@ -1,0 +1,112 @@
+.wavepage p {
+  width: 640px;
+  height: 20px;
+  color: gray;
+}
+.wavepage a {
+  text-decoration: none;
+  color: gray;
+}
+.content {
+  margin: 0 90px;
+}
+
+.card-honey {
+  width: 1280px;
+}
+
+.h2-card-honey {
+  font-family: "Cormorant", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.honey-card-img {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+}
+
+.p1-honey-content {
+  font-size: 24px;
+  margin-left: 530px;
+}
+
+.p2-honey-content {
+  font-size: 18px;
+  width: 460px;
+  margin-left: 530px;
+  min-height: 151px;
+}
+
+.status-and-counter {
+  margin-top: 190px;
+  margin-left: 530px;
+}
+
+.honey-p-status {
+  color: #48a300;
+}
+
+.input-count {
+  width: 20px;
+  height: 40px;
+}
+
+.button1honey {
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 16px;
+  width: 25px;
+  height: 40px;
+}
+
+.button2honey {
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 16px;
+  width: 25px;
+  height: 40px;
+}
+.buy-button {
+  cursor: pointer;
+  margin-left: 20px;
+  background: #d9d9d9;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+}
+
+.description-button1 {
+  background-color: white;
+  border: 1px solid #8a8a8a;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.description-button2 {
+  background-color: white;
+  border: 1px solid #8a8a8a;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.chosen {
+  background-color: grey;
+}
+.description-form {
+  margin-top: 32px;
+}
+
+.description {
+  border: 1px solid #8a8a8a;
+  padding: 16px;
+  font-weight: bold;
+}

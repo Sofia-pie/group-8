@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Product } from '../../core/models/product';
+import { CartService } from '../../core/services/cart.service';
 import { ProductService } from '../../core/services/product.service';
 
 @Component({
@@ -11,19 +12,42 @@ import { ProductService } from '../../core/services/product.service';
   styleUrls: ['./product-page.component.css'],
 })
 export class ProductPageComponent implements OnInit {
+  info: boolean = true;
+  product: Product;
+  quantity: number = 1;
+
   constructor(
     private route: ActivatedRoute,
-
+    private cartService: CartService,
     private productService: ProductService
   ) {}
 
-  stream$: Observable<any>;
-  product$: Observable<Product>;
   ngOnInit(): void {
-    this.product$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        return this.productService.getProduct(params.get('id')!);
-      })
-    );
+    this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap) => {
+          return this.productService.getProduct(params.get('id')!);
+        })
+      )
+      .subscribe((prod) => (this.product = prod));
+  }
+  decrease() {
+    this.quantity--;
+  }
+
+  add() {
+    this.quantity++;
+  }
+  showInfo() {
+    this.info = true;
+  }
+
+  showAdditional() {
+    this.info = false;
+  }
+
+  buy(event: any) {
+    console.log(event);
+    this.cartService.addItem({ product: event, quantity: this.quantity });
   }
 }

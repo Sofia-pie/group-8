@@ -1,13 +1,13 @@
-.background {
-  background-image: url("/../images/Background/BackgroundOpacity50.png");
+/* .background {
+  background-image: url("../../assets/images/Background/.png");
   width: 1440px;
   min-height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .img img {
-  width: 1440px;
+  width: 100%;
   height: 480px;
 }
 

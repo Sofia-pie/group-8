@@ -1,1 +1,40 @@
-<p>page</p>
+<div class="content">
+	<div class="wavepage">
+		<p><a [routerLink]="['/main-page']">Головна сторінка</a> > <a [routerLink]="['/products']">Каталог товару</a> >
+			{{product.name}}</p>
+	</div>
+	<div class="card-honey" *ngIf="product">
+		<h2 class="h2-card-honey">{{product.name}}</h2>
+		<div class="honey-content">
+			<img class="honey-card-img" src="assets/images/HoneyPhoto/Мед 2.png" alt="">
+			<p class="p1-honey-content">{{product.price}} ₴</p>
+			<p class="p2-honey-content">{{product.description}}</p>
+			<div class="status-and-counter">
+				<p class="honey-p-status" *ngIf="product.amount>0">Є в наявності</p>
+				<p class="honey-p-status" *ngIf="product.amount <= 0">Немає в наявності</p>
+				<button class="button1honey" (click)="decrease()">-</button>
+				<input class="input-count" type="text" value="1" [(ngModel)]="quantity">
+				<button class="button2honey" (click)="add()">+</button>
+				<button class="buy-button" (click)="buy(product)">Додати в кошик</button>
+			</div>
+		</div>
+		<div class="description-form">
+			<div>
+				<button class="description-button1" (click)="showInfo()" [ngClass]="{'chosen': info}">Опис</button>
+				<button class="description-button2" (click)="showAdditional()" [ngClass]="{'chosen': !info}">Додаткова
+					інформація</button>
+			</div>
+			<div class="description" *ngIf="info">
+				<div>
+					<p class="weight-p">ВАГА</p>
+					<p class="weight-p2">{{product.weight}}</p>
+				</div>
+				<div>
+					<p class="size-p">РОЗМІРИ</p>
+					<p class="size-p2">{{product.size}}</p>
+				</div>
+			</div>
+			<div class="description" *ngIf="!info">{{product.additional}}</div>
+		</div>
+	</div>
+</div>

@@ -7,6 +7,9 @@ export class CartItem {
     price: 0,
     amount: 0,
     category: '',
+    articul: '',
+    weight: 0,
+    size: 0,
     createdAt: new Date(),
   };
   public quantity: number = 0;

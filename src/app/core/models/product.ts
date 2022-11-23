@@ -7,5 +7,8 @@ export interface Product {
   additional?: string;
   amount: number;
   category: string;
+  articul: string;
+  weight: number;
+  size: number;
   createdAt: Date;
 }
