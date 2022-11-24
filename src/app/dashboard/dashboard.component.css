@@ -1,8 +1,11 @@
+.page {
+  display: grid;
+  grid-template-columns: 340px auto;
+}
+
 .main {
-  position: relative;
   padding: 16px;
-  margin-top: 110px;
-  margin-left: 340px;
+  min-height: 519px;
 }
 
 .home-icon {
@@ -150,78 +153,3 @@ table {
 /* Кінець селекторів Нещодавно додані товари */
 
 /* Кінець селекторів main */
-
-/* Початок селекторів left-content */
-
-.left-content {
-  position: absolute;
-  left: 0;
-  top: 77px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #d3d3d3;
-  width: 10vw;
-  height: 960px;
-}
-
-.left-content-position {
-  width: 260px;
-
-  background-color: #d3d3d3;
-}
-
-.button-section1 {
-  height: 110px;
-  width: 260px;
-  background-color: #b4b4b4;
-}
-
-.img-panel {
-  margin-left: 100px;
-}
-.LogoS {
-  width: 100%;
-}
-
-.a-panel {
-  margin-left: 50px;
-}
-
-.button-section2 {
-  height: 110px;
-  width: 260px;
-}
-
-.img-goods {
-  margin-left: 100px;
-}
-
-.a-goods {
-  margin-left: 105px;
-}
-.button-section3 {
-  height: 110px;
-  width: 260px;
-}
-
-.img-orders {
-  margin-left: 100px;
-}
-
-.a-orders {
-  margin-left: 100px;
-}
-.button-section4 {
-  height: 110px;
-  width: 260px;
-}
-
-.img-users {
-  margin-left: 100px;
-}
-
-.a-users {
-  margin-left: 75px;
-}
-
-/* Кінець селекторів left-content */

@@ -1,0 +1,62 @@
+<div class="page">
+	<app-side-panel></app-side-panel>
+	<main class="main">
+		<div class="goods-table">
+			<div class="goods">
+				<label>Товар</label>
+				<button class="button-add-goods"><img src="assets/images/Icons/+.png" alt="+"></button>
+				<button class="button-del-goods"><img src="assets/images/Icons/trashbasket icon.png"
+						alt="trashbasket icon"></button>
+				<button class="button-change-goods"><img src="assets/images/Icons/edit small icon.png"
+						alt="edit small icon"></button>
+				<table border="1">
+					<tr>
+						<th><input type="checkbox"></th>
+						<th>Фото</th>
+						<th>Назва</th>
+						<th>Артикул</th>
+						<th>Посилання</th>
+						<th>Кількість</th>
+						<th>Ціна</th>
+					</tr>
+					<ng-container
+						*ngFor="let product of products | search: 'name':name | search: 'articul' : articul| search: 'amount':amount">
+						<tr>
+							<td><input type="radio" [value]="product" name="product"></td>
+							<td><img src="assets/images/HoneyPhoto/Мед 2.png" alt="Мед 2"></td>
+							<td>{{product.name}}</td>
+							<td>{{product.articul}}</td>
+							<td><a [routerLink]="['/products/',product._id]">🔗</a></td>
+							<td>{{product.amount}}</td>
+							<td>{{product.price}} ₴</td>
+						</tr>
+					</ng-container>
+
+
+				</table>
+			</div>
+			<div class="filter-goods">
+				<div class="border-filter">
+					<p>Фільтр</p>
+				</div>
+				<div class="article-goods">
+					<p>Артикул товару</p>
+					<input type="text" [(ngModel)]="articul">
+				</div>
+				<div class="name-goods">
+					<p>Назва товару</p>
+					<input type="text" [(ngModel)]="name">
+				</div>
+				<div class="amount-goods">
+					<p>Кількість</p>
+					<input type="number" [(ngModel)]="amount">
+				</div>
+				<div class="price-goods">
+					Ціна товару
+					<input type="text"> - <input type="text">
+					<button class="button-price-ok">OK</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

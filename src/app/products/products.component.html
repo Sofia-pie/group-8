@@ -59,7 +59,7 @@
 			</div>
 			<div class="goods-catalog">
 				<app-product-card
-					*ngFor="let product of products  | search: searchValue | sort:sortParams | paginate: { itemsPerPage: 9, currentPage: p }"
+					*ngFor="let product of products  | search: 'name':searchValue | sort:sortParams | paginate: { itemsPerPage: 9, currentPage: p }"
 					[product]='product' (buyProduct)="buy($event)">
 				</app-product-card>
 			</div>

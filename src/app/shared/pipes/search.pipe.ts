@@ -5,11 +5,14 @@ import { Product } from '../../core/models/product';
   name: 'search',
 })
 export class SearchPipe implements PipeTransform {
-  transform(products: Product[], search: string): Product[] {
+  transform(products: any[], field: string, search: any): any[] {
+    if (search && typeof search == 'number') {
+      return products.filter((pr) => pr[field] === search);
+    }
     if (!search || search.length === 0) return products;
 
     return products.filter((pr) =>
-      pr.name.toLowerCase().includes(search.toLowerCase())
+      pr[field].toLowerCase().includes(search.toLowerCase())
     );
   }
 }

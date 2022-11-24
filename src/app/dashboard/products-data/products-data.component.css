@@ -1,0 +1,124 @@
+.page {
+  display: grid;
+  grid-template-columns: 340px auto;
+}
+
+.main {
+  padding: 16px;
+  min-height: 519px;
+}
+
+.home-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.title-main {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.goods-table {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+table {
+  max-width: 920px;
+  /* height: 400px; */
+}
+
+table img {
+  width: 75px;
+  height: 75px;
+  margin: 0 12px;
+}
+
+/* Початок селекторів Популярні товари */
+
+.goods {
+  margin-top: 40px;
+  background-color: #ebeaea;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.button-add-goods {
+  cursor: pointer;
+  margin-left: 520px;
+  margin-bottom: 20px;
+  height: 27px;
+  background-color: #bebfbf;
+  border: none;
+}
+
+.button-del-goods {
+  cursor: pointer;
+  border: none;
+  background-color: #bebfbf;
+}
+
+.button-change-goods {
+  cursor: pointer;
+  border: none;
+  background-color: #bebfbf;
+}
+
+/* Кінець селекторів Популярні товари */
+
+/* Початок селекторів filter */
+
+.filter-goods {
+  border-radius: 8px;
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border: 1px solid #b6b6b6;
+}
+
+.border-filter {
+  border-radius: 8px;
+  width: 400px;
+  border: 1px solid #b6b6b6;
+}
+
+.article-goods {
+  padding: 8px;
+}
+
+.article-goods input {
+  width: 380px;
+}
+
+.name-goods {
+  padding: 8px;
+}
+
+.name-goods input {
+  width: 380px;
+}
+
+.amount-goods {
+  padding: 8px;
+}
+
+.price-goods {
+  padding: 8px;
+}
+
+.price-goods input {
+  width: 50px;
+}
+
+.button-price-ok {
+  cursor: pointer;
+  border: none;
+  background-color: #d9d9d9;
+}
+
+/* Кінець селекторів filter */
+
+/* Кінець селекторів main */
