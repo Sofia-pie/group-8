@@ -1,0 +1,71 @@
+/* Початок селекторів left-content */
+.left-content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d3d3d3;
+  width: 10vw;
+  min-height: 960px;
+  height: 100vh;
+}
+
+.left-content-position {
+  width: 260px;
+
+  background-color: #d3d3d3;
+}
+
+.button-section1 {
+  height: 110px;
+  width: 260px;
+  background-color: #b4b4b4;
+}
+
+.img-panel {
+  margin-left: 100px;
+}
+.LogoS {
+  width: 100%;
+}
+
+.a-panel {
+  margin-left: 50px;
+}
+
+.button-section2 {
+  height: 110px;
+  width: 260px;
+}
+
+.img-goods {
+  margin-left: 100px;
+}
+
+.a-goods {
+  margin-left: 105px;
+}
+.button-section3 {
+  height: 110px;
+  width: 260px;
+}
+
+.img-orders {
+  margin-left: 100px;
+}
+
+.a-orders {
+  margin-left: 100px;
+}
+.button-section4 {
+  height: 110px;
+  width: 260px;
+}
+
+.img-users {
+  margin-left: 100px;
+}
+
+.a-users {
+  margin-left: 75px;
+}
+
+/* Кінець селекторів left-content */
