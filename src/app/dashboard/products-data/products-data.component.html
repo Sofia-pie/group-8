@@ -4,11 +4,12 @@
 		<div class="goods-table">
 			<div class="goods">
 				<label>Товар</label>
-				<button class="button-add-goods"><img src="assets/images/Icons/+.png" alt="+"></button>
-				<button class="button-del-goods"><img src="assets/images/Icons/trashbasket icon.png"
-						alt="trashbasket icon"></button>
-				<button class="button-change-goods"><img src="assets/images/Icons/edit small icon.png"
-						alt="edit small icon"></button>
+				<button class="button-add-goods" [routerLink]="['add']"><img src="assets/images/Icons/+.png"
+						alt="+"></button>
+				<button class="button-del-goods" (click)="deleteProduct(id)"><img
+						src="assets/images/Icons/trashbasket icon.png" alt="trashbasket icon"></button>
+				<button class="button-change-goods" [routerLink]="['edit',id]"><img
+						src="assets/images/Icons/edit small icon.png" alt="edit small icon"></button>
 				<table border="1">
 					<tr>
 						<th><input type="checkbox"></th>
@@ -22,7 +23,7 @@
 					<ng-container
 						*ngFor="let product of products | search: 'name':name | search: 'articul' : articul| search: 'amount':amount">
 						<tr>
-							<td><input type="radio" [value]="product" name="product"></td>
+							<td><input type="radio" [(ngModel)]="id" [value]="product._id" name="product"></td>
 							<td><img src="assets/images/HoneyPhoto/Мед 2.png" alt="Мед 2"></td>
 							<td>{{product.name}}</td>
 							<td>{{product.articul}}</td>

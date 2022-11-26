@@ -1,0 +1,48 @@
+<main>
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+		<div><label>Назва</label>
+			<input type="text" formControlName="name" class="form-inputs">
+		</div>
+		<div>
+			<label>Ціна</label>
+			<input type="number" formControlName="price" class="form-inputs">
+		</div>
+		<div>
+
+			<label>Опис</label>
+			<input type="text" formControlName="description" class="form-inputs">
+		</div>
+		<div>
+			<label>Додаткова інформація</label>
+			<input type="text" formControlName="additional" class="form-inputs">
+		</div>
+		<div>
+			<label>Кількість</label>
+			<input type="number" formControlName="amount" class="form-inputs">
+		</div>
+		<div>
+			<label>Категорія</label>
+			<input type="text" formControlName="category" class="form-inputs">
+		</div>
+		<div>
+			<label>Артикул</label>
+			<input type="text" formControlName="articul" class="form-inputs">
+		</div>
+		<div>
+			<label>Вага</label>
+			<input type="number" formControlName="weight" class="form-inputs">
+		</div>
+		<label>Розмір</label>
+		<input type="number" formControlName="size" class="form-inputs">
+
+
+
+		<div class="form-group">
+			<button class="btn">
+				Зберегти
+			</button>
+			<a [routerLink]="['/dashboard/products']" class="btn">Відмінити</a>
+		</div>
+	</form>
+</main>

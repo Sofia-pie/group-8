@@ -12,6 +12,7 @@ export class ProductsDataComponent implements OnInit {
   articul: string;
   name: string;
   amount: string;
+  id: number = 0;
 
   constructor(private productsService: ProductService) {}
 
@@ -19,5 +20,15 @@ export class ProductsDataComponent implements OnInit {
     this.productsService
       .getProducts()
       .subscribe((prod) => (this.products = prod));
+  }
+
+  deleteProduct(id: number | string) {
+    this.productsService
+      .deleteProduct(id)
+      .subscribe(() =>
+        this.productsService
+          .getProducts()
+          .subscribe((prod) => (this.products = prod))
+      );
   }
 }

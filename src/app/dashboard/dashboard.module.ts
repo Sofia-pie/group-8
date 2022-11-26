@@ -4,10 +4,21 @@ import { DashboardComponent } from './dashboard.component';
 import { RouterModule } from '@angular/router';
 import { ProductsDataComponent } from './products-data/products-data.component';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
-  declarations: [DashboardComponent, ProductsDataComponent],
-  imports: [CommonModule, RouterModule, SharedModule, FormsModule],
+  declarations: [
+    DashboardComponent,
+    ProductsDataComponent,
+    ProductFormComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class DashboardModule {}

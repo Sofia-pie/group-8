@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductFormComponent } from './dashboard/product-form/product-form.component';
 import { ProductsDataComponent } from './dashboard/products-data/products-data.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AdminGuard } from './shared/admin.guard';
@@ -34,6 +35,17 @@ const routes: Routes = [
     component: ProductsDataComponent,
     canActivate: [AuthGuard, AdminGuard],
   },
+  {
+    path: 'dashboard/products/add',
+    component: ProductFormComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+  {
+    path: 'dashboard/products/edit/:id',
+    component: ProductFormComponent,
+    canActivate: [AuthGuard, AdminGuard],
+  },
+
   { path: '', pathMatch: 'full', redirectTo: 'main-page' },
 ];
 
