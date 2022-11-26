@@ -46,10 +46,20 @@ table img {
   padding: 8px;
 }
 
+.table-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .button-add-goods {
   cursor: pointer;
-  margin-left: 520px;
-  margin-bottom: 20px;
+
   height: 27px;
   background-color: #bebfbf;
   border: none;
@@ -58,12 +68,14 @@ table img {
 .button-del-goods {
   cursor: pointer;
   border: none;
+  height: 27px;
   background-color: #bebfbf;
 }
 
 .button-change-goods {
   cursor: pointer;
   border: none;
+  height: 27px;
   background-color: #bebfbf;
 }
 

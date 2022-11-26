@@ -3,7 +3,7 @@
 		<h1 class="basket-title">Корзина</h1>
 		<div class="basket-fields">
 			<div class="basket-field" *ngFor="let item of cartService.cartItems">
-				<img class="img-goods1" src="assets/images/HoneyPhoto/Мед 3.png" alt="goods1">
+				<img class="img-goods1" [src]="item.product.img" alt="goods1">
 				<div>
 					<p class="goods-1-p-name" [routerLink]="['/products/',item.product._id]">{{item.product.name}}</p>
 					<button class="goods-2-btn-price" (click)="removeFromCart(item)">X</button>

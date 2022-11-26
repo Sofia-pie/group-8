@@ -1,6 +1,9 @@
 <div class="goods" [routerLink]="['/products/',product._id]">
-	<!-- <img class="img-goods" [src]="product.image" [alt]="product.name"> -->
-	<div class="img-goods"><img src="assets\images\HoneyPhoto\Мед 1.png"></div>
+
+	<div class="img-goods">
+		<img [src]="product.img">
+		<ng-container *ngIf="!product.img"><img src="assets\images\HoneyPhoto\Мед 1.png"></ng-container>
+	</div>
 	<h4>{{product.name}}</h4>
 	<p>Ціна: {{product.price}} ₴</p>
 	<p *ngIf="product.amount > 0">Є в наявності</p>

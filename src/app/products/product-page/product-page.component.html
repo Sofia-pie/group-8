@@ -1,12 +1,13 @@
-<div class="content">
+<div class="content" *ngIf="product">
 	<div class="wavepage">
 		<p><a [routerLink]="['/main-page']">Головна сторінка</a> > <a [routerLink]="['/products']">Каталог товару</a> >
 			{{product.name}}</p>
 	</div>
-	<div class="card-honey" *ngIf="product">
+	<div class="card-honey">
 		<h2 class="h2-card-honey">{{product.name}}</h2>
 		<div class="honey-content">
-			<img class="honey-card-img" src="assets/images/HoneyPhoto/Мед 2.png" alt="">
+			<img *ngIf="!product.img" class="honey-card-img" src="assets/images/HoneyPhoto/Мед 2.png" alt="">
+			<img [src]="product.img" class="honey-card-img">
 			<p class="p1-honey-content">{{product.price}} ₴</p>
 			<p class="p2-honey-content">{{product.description}}</p>
 			<div class="status-and-counter">

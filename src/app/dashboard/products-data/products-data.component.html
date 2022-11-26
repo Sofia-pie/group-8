@@ -3,13 +3,17 @@
 	<main class="main">
 		<div class="goods-table">
 			<div class="goods">
-				<label>Товар</label>
-				<button class="button-add-goods" [routerLink]="['add']"><img src="assets/images/Icons/+.png"
-						alt="+"></button>
-				<button class="button-del-goods" (click)="deleteProduct(id)"><img
-						src="assets/images/Icons/trashbasket icon.png" alt="trashbasket icon"></button>
-				<button class="button-change-goods" [routerLink]="['edit',id]"><img
-						src="assets/images/Icons/edit small icon.png" alt="edit small icon"></button>
+				<div class="table-name">
+					<label>Товар</label>
+					<div class="buttons">
+						<button class="button-add-goods" [routerLink]="['add']"><img src="assets/images/Icons/+.png"
+								alt="+"></button>
+						<button class="button-del-goods" (click)="deleteProduct(id)"><img
+								src="assets/images/Icons/trashbasket icon.png" alt="trashbasket icon"></button>
+						<button class="button-change-goods" [routerLink]="['edit',id]"><img
+								src="assets/images/Icons/edit small icon.png" alt="edit small icon"></button>
+					</div>
+				</div>
 				<table border="1">
 					<tr>
 						<th><input type="checkbox"></th>
@@ -24,7 +28,7 @@
 						*ngFor="let product of products | search: 'name':name | search: 'articul' : articul| search: 'amount':amount">
 						<tr>
 							<td><input type="radio" [(ngModel)]="id" [value]="product._id" name="product"></td>
-							<td><img src="assets/images/HoneyPhoto/Мед 2.png" alt="Мед 2"></td>
+							<td><img [src]="product.img"></td>
 							<td>{{product.name}}</td>
 							<td>{{product.articul}}</td>
 							<td><a [routerLink]="['/products/',product._id]">🔗</a></td>

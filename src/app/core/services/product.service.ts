@@ -21,8 +21,16 @@ export class ProductService {
     return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 
-  createProduct(product: Product) {
-    return this.http.post<Product>(this.apiUrl, product);
+  createProduct(product: Product, img: File) {
+    let formData = new FormData();
+    for (let [key, val] of Object.entries(product)) {
+      formData.append(key, JSON.stringify(val));
+    }
+    formData.append('img', img);
+    return this.http.post<Product>(this.apiUrl, formData, {
+      reportProgress: true,
+      observe: 'events',
+    });
   }
 
   updateProduct(id: string | number, product: Product) {
